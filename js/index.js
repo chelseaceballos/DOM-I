@@ -97,4 +97,31 @@ mainH4[0].textContent = siteContent["main-content"]["features-h4"];
 mainH4[1].textContent = siteContent["main-content"]["about-h4"];
 mainH4[2].textContent = siteContent["main-content"]["services-h4"];
 mainH4[3].textContent = siteContent["main-content"]["product-h4"];
-mainH4[4].textContent = siteContent["main-content"]["vision-h4"];
+mainH4[4].textContent = siteContent["main-content"]["vision-h4"]; // Is there a way to add two words for ex. "company's vision"? - bracket notation maybe?
+
+// lets address the Paragraphs in main-content
+let mainParagraphs = document.querySelectorAll(".main-content .text-content p"); // select class of main-content and text-content and <p> from html
+
+mainParagraphs[0].textContent = siteContent["main-content"]["features-content"];
+mainParagraphs[1].textContent = siteContent["main-content"]["about-content"];
+mainParagraphs[2].textContent = siteContent["main-content"]["services-content"];
+mainParagraphs[3].textContent = siteContent["main-content"]["product-content"];
+mainParagraphs[4].textContent = siteContent["main-content"]["vision-content"];
+
+// CONTACT-------------
+
+//contactH4
+let contactH4 = document.querySelector('.contact h4');
+contactH4.textContent = siteContent['contact']['contact-h4'];
+
+//contactP
+let contactP = document.querySelectorAll(".contact p");
+contactP[0].innerHTML = siteContent["contact"]["address"]
+  .split("Street ")
+  .join(`Street <br>`);
+contactP[1].innerHTML = siteContent["contact"]["phone"];
+contactP[2].innerHTML = siteContent["contact"]["email"];
+
+//FOOTER ---------------------------------
+let footer = document.querySelector("footer p");
+footer.textContent = siteContent["footer"]["copyright"];
