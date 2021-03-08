@@ -70,3 +70,14 @@ nav.prepend(newATag);
 const newATag2 = document.createElement('a');
 newATag2.textContent = "Append";
 nav.append(newATag2);
+// add .style to match color and new cursor
+newATag.style.color = "grey";
+newATag.style.cursor = "pointer";
+newATag2.style.color = 'grey';
+newATag2.style.cursor = 'pointer';
+
+// CTA SECTION
+
+// Set the heading image
+let headImg = document.getElementById('cta-img');
+headImg.setAttribute('src', siteContent['cta']['img-src']);
