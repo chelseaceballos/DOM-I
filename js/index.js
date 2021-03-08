@@ -45,7 +45,8 @@ let midImg = document.getElementById('middle-img');
 midImg.setAttribute('src', siteContent['main-content']["middle-img-src"]); // setting middleImage in main-content
 
 
-//NAV BAR
+//NAV BAR--------------------
+
 let navItems = document.querySelectorAll('a'); // this is selecting ALL anchor tags within the nav
 navItems[0].textContent = siteContent['nav']['nav-item-1'];
 navItems[1].textContent = siteContent['nav']['nav-item-2'];
@@ -54,9 +55,9 @@ navItems[3].textContent = siteContent['nav']['nav-item-4'];
 navItems[4].textContent = siteContent['nav']['nav-item-5'];
 navItems[5].textContent = siteContent['nav']['nav-item-6'];
 
-// turn nav items Grey
+// turn nav items Green
 navItems.forEach(function(currentValue){ 
-  currentValue.style.color= "grey"; // .style effects CSS properties
+  currentValue.style.color= "green"; // .style effects CSS properties
 });
 
 // select the nav to work on
@@ -71,13 +72,29 @@ const newATag2 = document.createElement('a');
 newATag2.textContent = "Append";
 nav.append(newATag2);
 // add .style to match color and new cursor
-newATag.style.color = "grey";
+newATag.style.color = "green";
 newATag.style.cursor = "pointer";
-newATag2.style.color = 'grey';
+newATag2.style.color = 'green';
 newATag2.style.cursor = 'pointer';
 
-// CTA SECTION
+// CTA SECTION --------------
 
-// Set the heading image
+// Set the heading image 
 let headImg = document.getElementById('cta-img');
 headImg.setAttribute('src', siteContent['cta']['img-src']);
+//make button 'Get Started'
+let ctaButton = document.querySelector('button');
+ctaButton.innerHTML = siteContent['cta']['button'];
+// cta <h1>DOM<br> Is<br> Awesome</h1>
+let ctaHeader = document.querySelector('h1');
+ctaHeader.innerHTML = siteContent['cta']['h1'].split(' ').join(`<br>`); // if you do not .join they are not separated by a <br> but by a ','
+
+//MAIN CONTENT -------------------
+//address ALL h4's in main-content
+let mainH4 = document.querySelectorAll('.main-content .text-content h4');
+
+mainH4[0].textContent = siteContent["main-content"]["features-h4"];
+mainH4[1].textContent = siteContent["main-content"]["about-h4"];
+mainH4[2].textContent = siteContent["main-content"]["services-h4"];
+mainH4[3].textContent = siteContent["main-content"]["product-h4"];
+mainH4[4].textContent = siteContent["main-content"]["vision-h4"];
